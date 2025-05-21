@@ -1,0 +1,10 @@
+.dfx/
+.mops/
+.vscode/
+node_modules/
+package-lock.json
+repomix-output.txt
+.env
+canister_ids.json
+cmacs.json
+__pycache__
