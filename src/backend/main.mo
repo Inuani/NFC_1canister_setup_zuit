@@ -1,10 +1,4 @@
-import Server "mo:server";
 import Text "mo:base/Text";
-import Nat "mo:base/Nat";
-import Assets "mo:assets";
-import T "mo:assets/Types";
-import Cycles "mo:base/ExperimentalCycles";
-import Principal "mo:base/Principal";
 import Routes "routes";
 import Blob "mo:base/Blob";
 import Http "mo:certified-cache/Http";
@@ -61,6 +55,8 @@ shared ({ caller = creator }) actor class () = this {
             streaming_strategy = null;
             upgrade = ?false;
         };
+
+  
   };
 
   public func http_request_update(req : Frontend.Request) : async Frontend.Response {
@@ -84,7 +80,7 @@ shared ({ caller = creator }) actor class () = this {
       };
     };
 
-    return (Frontend.get_html(req));
+return (Frontend.get_html(req));
   };
 
  

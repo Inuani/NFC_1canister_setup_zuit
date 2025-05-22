@@ -2,7 +2,7 @@ import Array "mo:base/Array";
 import Text "mo:base/Text";
 import Blob "mo:base/Blob";
 import index "index";
-import unnamed "unnamed";
+// import unnamed "unnamed";
 import invalid "invalid";
 
 module {
@@ -30,13 +30,13 @@ module {
                 status_code = 200;
             };
         };
-        if (url == "/unnamed.webp") {
-            return {
-                body = unnamed.get_html();
-                headers = [("Content-Type", "image/webp")];
-                status_code = 200;
-            };
-        };
+        // if (url == "/unnamed.webp") {
+        //     return {
+        //         body = unnamed.get_html();
+        //         headers = [("Content-Type", "image/webp")];
+        //         status_code = 200;
+        //     };
+        // };
         if (url == "/invalid.html") {
             return {
                 body = invalid.get_html();
