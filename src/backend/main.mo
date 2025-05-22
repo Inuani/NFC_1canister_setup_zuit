@@ -60,8 +60,6 @@ shared ({ caller = creator }) actor class () = this {
   };
 
   public func http_request_update(req : Frontend.Request) : async Frontend.Response {
-
-    // Check each protected route
     let routes_array = routes_storage.listProtectedRoutes();
     for ((path, protection) in routes_array.vals()) {
       if (Text.contains(req.url, #text path)) {
@@ -70,7 +68,7 @@ shared ({ caller = creator }) actor class () = this {
           url = if (hasAccess) {
             "/" # path;
           } else {
-            "/invalid.html";
+            "/";
           };
           method = req.method;
           body = req.body;
