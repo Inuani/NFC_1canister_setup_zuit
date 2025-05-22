@@ -1,5 +1,0 @@
-[dependencies]
-base = "0.14.4"
-server = "1.0.0"
-http-parser = "0.3.4"
-assets = "0.2.2"

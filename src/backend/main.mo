@@ -68,7 +68,7 @@ shared ({ caller = creator }) actor class () = this {
           url = if (hasAccess) {
             "/" # path;
           } else {
-            "/";
+            "/invalid.html";
           };
           method = req.method;
           body = req.body;
